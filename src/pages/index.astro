@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import { Image } from "astro:assets";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../components/icons/Linkedin.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Expereience from "../components/Expereience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCase from "../components/icons/BriefCase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="Porfolio de Yosefh - Desarrollador y Programador Web"
+  descrpition="Contrata a Yosefh para tu aplicacion web."
+>
+  <main class="px-4">
+    <!-- Presentacion -->
+
+    <SectionContainer class="pt-44 pb-24">
+      <Image
+        src="https://cdn.discordapp.com/attachments/731778364183937044/1230021179373256814/YosefhKNT_a_minimalit_logo_of_a_fox_using_a_combination_of_red__09995449-f68f-4780-9ebe-d8e8adeea33f_-_copia_2.png?ex=6631cd7d&is=661f587d&hm=46fc37d19d2a6e7b09fce97feecdc8f706c72af183274dfd810750b562bdc713&"
+        alt="Yosefh Logo"
+        class="rounded-full size-20 mb-5"
+        width={48}
+        height={48}
+      />
+
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex gap-x-4 pb-2 lg:pb-4"
+      >
+        Hey, Soy José Ramón!
+
+        <div class="flex justify-center items-center">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex justify-center items-center"
+          >
+            <Badge>Contratame.</Badge>
+          </a>
+        </div>
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-90 text-wrap max-w-[700px]">
+        1 año de expreciencia.
+        <span class="text-purple-300/90">
+          Desarrollador Web y estudiante de Ingeniería.
+        </span>
+        Soy de Nayarit,
+        <span class="font-bold">Mexico</span>.
+        <span> Especializado en crear aplicaciones agradables</span>
+      </h2>
+
+      <!-- Redes Sociales y contacto -->
+
+      <nav class="flex gap-3 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/SoyYosefh">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:yosefhknt@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          yosefhknt@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <!-- Experiencia -->
+
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-4 flex gap-x-3 items-center">
+        <BriefCase class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Expereience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-4 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>

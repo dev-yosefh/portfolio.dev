@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Actualmente",
+    title: "Mi Residencia Profesional",
+    description:
+      "Realizo mi residencia profesional en mi campus en el Centro de Computo, donde desarrollo diversos modulo del Sistemas Integran de Informacion (SII) el cual su usa por el personal, alumnado y aspirantes del instituto, con el fin de mejorar su rendimiento, accesibilidad y legibilidad.",
+    link: "https://sii.tepic.tecnm.mx/sistema/",
+  },
+  {
+    date: "Febrero 2023",
+    title: "Servicio Social",
+    description:
+      "Realizare mi servicio social en el Centro de Computo de mi campus, donde ayudare a mejorar y mantener los sistemas que se usan en el instituto.",
+  },
+  {
+    date: "Junio 2019",
+    title: "Inicio de mi carrera en la Universidad",
+    description:
+      "Entre a Tecnologivo Nacional de Mexico, Campus Tepic, en la carrera de Ingenieria en Sistemas Computacionales, donde inicio mi gusto por el desarrollo y programacion Web.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {EXPERIENCE.map((experience) => <ExperienceItem {...experience} />)}
+</ol>
